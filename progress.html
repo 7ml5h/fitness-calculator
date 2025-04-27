@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress Tracker | Fitness Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">🏋️ Fitness Calculator</div>
+    
+    <!-- Hamburger Toggle Button -->
+    <div class="navbar-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <!-- Navbar Links -->
+    <ul class="nav-links navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html" >Calculator</a></li>
+      <li><a href="progress.html" class="active">Progress</a></li>
+    </ul>
+  </nav>
+
+  <!-- Progress Tracker Section -->
+  <section class="form-section">
+    <h1>Track Your Progress 📈</h1>
+    <form id="progress-form" class="form-container">
+      <div class="input-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <div class="input-group">
+        <label for="current-weight">Current Weight (kg)</label>
+        <input type="number" id="current-weight" required>
+      </div>
+
+      <div class="input-group">
+        <label for="waist">Waist (cm)</label>
+        <input type="number" id="waist" required>
+      </div>
+
+      <button type="submit" class="btn">Add Entry</button>
+    </form>
+
+    <div id="progress-log" class="progress-log">
+      <h2>📋 Your Progress Log:</h2>
+      <ul id="log-list"></ul>
+    </div>
+
+    <button id="clear-progress" class="btn">Clear Progress</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
