@@ -181,15 +181,21 @@ function displayError(inputId, message) {
   errorMessage.textContent = message;
   inputField.parentElement.appendChild(errorMessage);
 }
-document.getElementById('clear-progress').addEventListener('click', function () {
-  localStorage.removeItem('progressLogs');
-  logList.innerHTML = ''; // Clear the displayed progress logs
-});
+
+
 // Navbar Toggle
+
+
+
 const toggleButton = document.querySelector('.navbar-toggle');
 const navbarMenu = document.querySelector('.navbar-menu');
 
 toggleButton.addEventListener('click', () => {
   navbarMenu.classList.toggle('active'); // This will show/hide the menu
+});
+
+document.getElementById('clear-progress').addEventListener('click', function () {
+  localStorage.removeItem('progressLogs');
+  logList.innerHTML = ''; // Clear the displayed progress logs
 });
 
