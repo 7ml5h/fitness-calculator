@@ -63,6 +63,23 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("protein").textContent = `Recommended Protein: ${Math.round(protein)} g/day`;
       document.getElementById("bmi").textContent = `BMI: ${bmi.toFixed(2)}`;
       document.getElementById("bmi-category").textContent = `BMI Category: ${bmiCategory}`;
+
+      // ✅ Add this block to show goal advice
+      let goalAdvice = "";
+      if (bmi < 18.5) {
+        goalAdvice = "Goal: You may consider gaining weight for optimal health.";
+      } else if (bmi >= 25) {
+        goalAdvice = "Goal: You may consider losing weight for better fitness.";
+      } else {
+        goalAdvice = "Goal: You’re at a healthy weight. Aim to maintain it!";
+      }
+      document.getElementById("goal-advice").textContent = goalAdvice;
+
+      document.getElementById("user-goal").innerHTML = `
+      For keeping your weight: ${Math.round(calories)} kcal/day<br>
+      For losing weight: ${Math.round(calories) - 500} kcal/day<br>
+      For gaining weight: ${Math.round(calories) + 500} kcal/day
+    `;
     });
   }
 
