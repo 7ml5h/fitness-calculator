@@ -101,6 +101,8 @@ body {
   border-radius: 8px;
   flex-direction: column;
   gap: 15px;
+  width: 80%;
+  margin-left: 5%;
 }
 
 .navbar-menu a {
